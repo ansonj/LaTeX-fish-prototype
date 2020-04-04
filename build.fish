@@ -18,10 +18,13 @@ end
 
 argparse 'q/quick' -- $argv
 
-if test -z "$_flag_quick" -a -f src.bib
-    f_run_dry
-    f_run_bibtex
-end
 f_run_dry
+if test $status != 0
+    exit $status
+end
+if test -z "$_flag_quick" -a -f src.bib
+    f_run_bibtex
+    and f_run_dry
+end
 f_run_create
-f_open
+and f_open
