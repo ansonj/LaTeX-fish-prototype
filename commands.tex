@@ -1,0 +1,37 @@
+% Character commands
+
+\newcommand{\dgr}{\ensuremath{^\circ}\space}
+
+
+% Section commands
+
+\newcommand{\unnumsec}[1]{
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\newcommand{\unnumsubsec}[1]{
+\subsection*{#1}
+\addcontentsline{toc}{subsection}{#1}
+}
+
+
+% Editing commands
+
+\newcommand{\marker}{
+\section{Marker}
+\begin{center}
+\Huge
+\color{red}
+\textsc{--- --- --- marker --- --- ---}
+\end{center}
+}
+
+\newcommand{\get}[1][Fix me!]{{\Huge \color{red} \textsc{#1}}}
+
+
+% Citations and references
+
+\newcommand{\needcite}{\textsuperscript{\color{red}\textit{[citation needed]}}}
+
+\newcommand{\fullref}[1]{section \ref{#1} on page \pageref{#1}}
