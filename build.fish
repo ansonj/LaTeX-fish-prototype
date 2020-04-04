@@ -18,7 +18,7 @@ end
 
 argparse 'q/quick' -- $argv
 
-if test -z "$_flag_quick"
+if test -z "$_flag_quick" -a -f src.bib
     f_run_dry
     f_run_bibtex
 end
