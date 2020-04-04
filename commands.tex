@@ -5,6 +5,11 @@
 
 % Section commands
 
+\newcommand{\unnumchapter}[1]{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
 \newcommand{\unnumsec}[1]{
 \section*{#1}
 \addcontentsline{toc}{section}{#1}
