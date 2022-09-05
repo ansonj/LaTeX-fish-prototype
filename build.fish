@@ -1,19 +1,19 @@
 #!/usr/bin/env fish
 
 function f_run_dry
-    pdflatex -draftmode -halt-on-error master.tex
+    pdflatex -draftmode -halt-on-error main.tex
 end
 
 function f_run_bibtex
-    bibtex master
+    bibtex main
 end
 
 function f_run_create
-    pdflatex -halt-on-error master.tex
+    pdflatex -halt-on-error main.tex
 end
 
 function f_open
-    open ./master.pdf
+    open ./main.pdf
 end
 
 argparse 'q/quick' -- $argv
